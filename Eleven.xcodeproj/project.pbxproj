@@ -46,7 +46,6 @@
 		0A4369A31B831C1300970757 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A4369A21B831C1300970757 /* MediaPlayer.framework */; };
 		0A490DF01B82D20900DFF33D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A490DEF1B82D20900DFF33D /* main.m */; };
 		0A490DF31B82D20900DFF33D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A490DF21B82D20900DFF33D /* AppDelegate.m */; };
-		0A490DF91B82D20900DFF33D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0A490DF71B82D20900DFF33D /* Main.storyboard */; };
 		0A490DFB1B82D20900DFF33D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A490DFA1B82D20900DFF33D /* Images.xcassets */; };
 		0A490DFE1B82D20900DFF33D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A490DFC1B82D20900DFF33D /* LaunchScreen.xib */; };
 		0A490E0A1B82D20A00DFF33D /* ElevenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A490E091B82D20A00DFF33D /* ElevenTests.m */; };
@@ -143,7 +142,6 @@
 		0A490E031B82D20A00DFF33D /* ElevenTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElevenTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A490E081B82D20A00DFF33D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0A490E091B82D20A00DFF33D /* ElevenTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ElevenTests.m; sourceTree = "<group>"; };
-		0A490E291B82D55200DFF33D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0A490E301B82D6E800DFF33D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		0A490E311B82D6EC00DFF33D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0A8EAF8F1B83895F00C4A6FF /* AppConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
@@ -457,7 +455,6 @@
 				0A43691E1B8307B400970757 /* Vendor */,
 				0A490DF11B82D20900DFF33D /* AppDelegate.h */,
 				0A490DF21B82D20900DFF33D /* AppDelegate.m */,
-				0A490DF71B82D20900DFF33D /* Main.storyboard */,
 				0A490DFA1B82D20900DFF33D /* Images.xcassets */,
 				0A490DFC1B82D20900DFF33D /* LaunchScreen.xib */,
 				0A490DED1B82D20900DFF33D /* Supporting Files */,
@@ -572,6 +569,7 @@
 				0A490DE71B82D20900DFF33D /* Frameworks */,
 				0A490DE81B82D20900DFF33D /* Resources */,
 				11B947E371E99ADE6D84F0DA /* Copy Pods Resources */,
+				FC91A51312B151CDFD8EBDB9 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -646,7 +644,6 @@
 				0A4369521B8308A900970757 /* docroot in Resources */,
 				0A07B8871B85BED4004245F3 /* kxmovie.bundle in Resources */,
 				0A490E2C1B82D6E600DFF33D /* Localizable.strings in Resources */,
-				0A490DF91B82D20900DFF33D /* Main.storyboard in Resources */,
 				0A490DFE1B82D20900DFF33D /* LaunchScreen.xib in Resources */,
 				0A490DFB1B82D20900DFF33D /* Images.xcassets in Resources */,
 			);
@@ -690,6 +687,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FC91A51312B151CDFD8EBDB9 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -749,14 +761,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0A490DF71B82D20900DFF33D /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0A490E291B82D55200DFF33D /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		0A490DFC1B82D20900DFF33D /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
